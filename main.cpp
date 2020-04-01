@@ -21,9 +21,8 @@ int main() {
     InvestmentInfo acctWithMonthlyDep = calculations.calculateAnnualInvestment(userData, true);
 
     // User BalanceAndInterest objects to relay interest info back to the user
-    BalanceAndInterest balanceAndInterest;
-    balanceAndInterest.noAdditionalPayments(acctWithNoMonthlyDep);
-    balanceAndInterest.additionalPayments(acctWithMonthlyDep);
+    BalanceAndInterest balanceAndInterestReport;
+    balanceAndInterestReport.reportGenerator(acctWithNoMonthlyDep, acctWithMonthlyDep);
 
     return 0;
 }

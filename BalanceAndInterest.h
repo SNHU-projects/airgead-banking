@@ -6,6 +6,7 @@
 #define AIRGEAD_BANKING_BALANCEANDINTEREST_H
 
 #include <vector>
+#include "DataInput.h"
 #include "Calculations.h"
 #include "InvestmentInfo.h"
 
@@ -15,13 +16,14 @@ class BalanceAndInterest {
 public:
     BalanceAndInterest();
 
-    void noAdditionalPayments(InvestmentInfo  &data);
+    void reportGenerator(InvestmentInfo  &t_dataOne, InvestmentInfo  &dataTwo);
 
-    void additionalPayments(InvestmentInfo  &data);
+    void annualReport(InvestmentInfo  &data);
 
 private:
     void printColHeader();
 
+    void additionalSessionCheck();
 };
 
 

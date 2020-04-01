@@ -14,8 +14,7 @@ vector<string> userPrompts = {
         "Initial Investment Amount:  ",
         "Monthly Deposit:  ",
         "Annual Interest:  ",
-        "Number of Years:  ",
-        "Press any key to continue . . ."
+        "Number of Years:  "
 };
 
 // Default constructor
@@ -26,37 +25,56 @@ DataInput::DataInput() {};
  * @return depositDetails
  */
 vector<double> DataInput::promptUser() {
-    char max[100];
     vector<double> depositDetails;
+    char quitCmd = 'a';  // Indicates infinite loop till user satisfies input requirements
 
-    try {
-        // User prompt header
-        cout << string(36, '*') << endl;
-        cout << string(12, '*') << " Data Input " << string(12, '*') << endl;
+    while (quitCmd != 'q') {
 
-        // Collect user input and organize in a tidy vector
-        for (int i = 0; i < userPrompts.size(); ++i) {
-            string prompt = userPrompts.at(i);
-            cout << prompt;
-            double userInput = 0.0;
-            cin >> userInput;
+        try {
+            // Clear any previously unfinished collections of user input
+            depositDetails.clear();
+
+            // User prompt header
+            cout << string(36, '*') << endl;
+            cout << string(12, '*') << " Data Input " << string(12, '*') << endl;
+
+            // Collect user input and organize in a tidy vector
+            for (int i = 0; i < userPrompts.size(); ++i) {
+                string prompt = userPrompts.at(i);
+                double userInput;
+                cout << prompt;
+                cin >> userInput;
+
+                // Check for valid user input
+                if (!cin || userInput < 0) {
+                    throw runtime_error("\n\nAlphabetical characters and negative amounts not allowed. \n\n"
+                                        "Please try again.\n\n");
+                }
+
+                depositDetails.push_back(userInput);
+            }
+
+        }
+        catch (runtime_error& except) {
             cin.clear(); // Clear error flags
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear out the input buffer
-            if (!cin) {
-                throw runtime_error("Not a valid number.");
-            }
-            if (!cin) {
-                throw runtime_error("Not a valid number.");
-            }
-            depositDetails.push_back(userInput);
+            cout << except.what() << endl;
         }
 
-        cout << endl;
-
-        return depositDetails;
-    } catch (runtime_error& except) {
-        cout << except.what() << endl;
+        // Check that depositDetails vector is full and user decides to continue
+        if (depositDetails.size() == 4 && enterCheck()) {
+            return depositDetails;
+        }
     }
+}
+
+/**
+ *
+ * @return bool
+ */
+bool DataInput::enterCheck() {
+    cout << "Press enter to continue . . .\n";
+    return cin.get() == '\n';
 }
 
 /**

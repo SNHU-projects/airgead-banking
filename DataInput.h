@@ -16,6 +16,8 @@ public:
 
     vector<double> promptUser();
 
+    bool enterCheck();
+
     void displayUserInput(vector<double> itemInfo);
 
 };

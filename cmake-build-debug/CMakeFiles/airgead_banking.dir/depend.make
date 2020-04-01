@@ -4,6 +4,7 @@
 CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: ../BalanceAndInterest.cpp
 CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: ../BalanceAndInterest.h
 CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: ../Calculations.h
+CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: ../DataInput.h
 CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: ../InvestmentInfo.h
 
 CMakeFiles/airgead_banking.dir/Calculations.cpp.o: ../Calculations.cpp
