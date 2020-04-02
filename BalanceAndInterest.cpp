@@ -3,6 +3,7 @@
 //
 #include <string_view>
 #include <iostream>
+#include <iomanip>
 #include "BalanceAndInterest.h"
 #include "Calculations.h"
 
@@ -18,44 +19,39 @@ BalanceAndInterest::BalanceAndInterest() {}
 
 // Private
 void BalanceAndInterest::printColHeader() {
-    printf("==================================================================\n");
-    printf("\t%-10s %23s %30s\n", // adds appropriate spacing to align columns & rows
-           YEAR,
-           YEAR_END_BAL,
-           YEAR_END_INTEREST);
-    printf("------------------------------------------------------------------\n");
+    cout << "==================================================================\n" << endl;
+    cout << "     " << YEAR << "          " << YEAR_END_BAL << "          " << YEAR_END_INTEREST << endl;
+    cout << "------------------------------------------------------------------\n" << endl;
 }
 
 void BalanceAndInterest::reportGenerator(InvestmentInfo  &t_dataOne, InvestmentInfo  &t_dataTwo) {
-    printf("     Balance and Interest Without Additional Monthly Deposits     \n");
+    cout <<"     Balance and Interest Without Additional Monthly Deposits     \n" << endl;
     annualReport(t_dataOne);
 
-    printf("     Balance and Interest With Additional Monthly Deposits     \n");
+    cout <<"     Balance and Interest With Additional Monthly Deposits     \n" << endl;
     annualReport(t_dataTwo);
-
-    additionalSessionCheck();
 }
 
 void BalanceAndInterest::annualReport(InvestmentInfo  &data) {
     printColHeader();
     for (int i = 0; i < data.years.size(); ++i) {
-        printf("\t%-10i %23.2f %30.2f\n", data.years.at(i), data.yearEndBalances.at(i), data.yearEndEarnedInterests.at(i));
+        cout << setw(9) << data.years.at(i);
+        cout << setw(26) << data.yearEndBalances.at(i) << fixed << setprecision(2);
+        cout << setw(27) << data.yearEndEarnedInterests.at(i) << fixed << setprecision(2)<< endl;
     }
-    printf("\n\n");
+    cout << endl << endl;
 }
 
-void BalanceAndInterest::additionalSessionCheck() {
+bool BalanceAndInterest::additionalSessionCheck() {
+    string text;
     try {
         cout << "Press enter to try more values (press 'q' to quit)\n";
-        if (cin.get() == '\n') {
-            DataInput dataInput;
-            dataInput.promptUser();
-        }
-        else if (cin.get() == 'q') {
-            exit(0);
+        getline(cin, text);
+        if (text.empty()) {
+            return true;
         }
         else {
-            throw runtime_error("\n\nCommand not recognized. Goodbye.\n\n");
+            return false;
         }
     }
     catch (runtime_error& except) {

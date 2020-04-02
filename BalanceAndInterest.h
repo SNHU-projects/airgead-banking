@@ -20,10 +20,11 @@ public:
 
     void annualReport(InvestmentInfo  &data);
 
+    bool additionalSessionCheck();
+
 private:
     void printColHeader();
 
-    void additionalSessionCheck();
 };
 
 

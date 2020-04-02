@@ -28,9 +28,9 @@ InvestmentInfo Calculations::calculateAnnualInvestment(vector<double> data, bool
     vector<vector<double>> yearEndBals;
 
     // Create an object to store our user feedback
-    InvestmentInfo investmentSansMonthlyDep;
+    InvestmentInfo investmentDetails;
 
-    // Return years as array of ints for display
+    // Return years as array of ints for display to the user
     for (int i = 0; i < numYears; ++i) {
         years.push_back(i+1);
     }
@@ -45,11 +45,11 @@ InvestmentInfo Calculations::calculateAnnualInvestment(vector<double> data, bool
     }
 
     // Populate Investment object properties
-    investmentSansMonthlyDep.years = years;
-    investmentSansMonthlyDep.yearEndEarnedInterests = yearEndBals.at(0);
-    investmentSansMonthlyDep.yearEndBalances = yearEndBals.at(1);
+    investmentDetails.years = years;
+    investmentDetails.yearEndEarnedInterests = yearEndBals.at(0);
+    investmentDetails.yearEndBalances = yearEndBals.at(1);
 
-    return investmentSansMonthlyDep;
+    return investmentDetails;
 
 }
 
@@ -69,13 +69,15 @@ vector<vector<double>> Calculations::annualBalWithInt(double t_openAmount, doubl
     double yearEndInt;
     double precIntRate = (t_intRate/100.00)/12.00;
     double intTracker = 0;
+    double intOnly = 0;
 
     // Loop over months in requested timeframe and calculate annual balance & earned interest
     for (int i = 0; i < (t_years * 12); ++i) {
         yearEndInt += ((intTracker + t_openAmount) + (t_depositAmount * (i+1))) * precIntRate;
         intTracker = yearEndInt;
         if (((i+1) % 12) == 0) {
-            annualInterestOnly.push_back(yearEndInt); // add just the annual interest to one vector first
+            annualInterestOnly.push_back(yearEndInt - intOnly); // add just the annual interest to one vector first
+            intOnly = yearEndInt;
             newBal = t_openAmount + (t_depositAmount * (i+1)) + yearEndInt;
             annualBalWithInterest.push_back(newBal); // add annual bal with interest to a second vector
         }
