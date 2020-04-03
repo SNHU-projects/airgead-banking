@@ -6,15 +6,30 @@
 
 using namespace std;
 
-vector<int> years;
-vector<double> yearEndBalances;
-vector<double> yearEndEarnedInterests;
 
-// Constructors
+// Constructor
 InvestmentInfo::InvestmentInfo() {}
 
-InvestmentInfo::InvestmentInfo(vector<int> t_years, vector<double> t_yearEndBalances, vector<double> t_yearEndEarnedInterests) {
-    this->years = t_years;
-    this->yearEndBalances = t_yearEndBalances;
-    this->yearEndEarnedInterests = t_yearEndEarnedInterests;
+const vector<int> &InvestmentInfo::getMYears() const {
+    return m_years;
+}
+
+void InvestmentInfo::setMYears(const vector<int> &mYears) {
+    m_years = mYears;
+}
+
+const vector<double> &InvestmentInfo::getMYearEndBalances() const {
+    return m_yearEndBalances;
+}
+
+void InvestmentInfo::setMYearEndBalances(const vector<double> &mYearEndBalances) {
+    m_yearEndBalances = mYearEndBalances;
+}
+
+const vector<double> &InvestmentInfo::getMYearEndEarnedInterests() const {
+    return m_yearEndEarnedInterests;
+}
+
+void InvestmentInfo::setMYearEndEarnedInterests(const vector<double> &mYearEndEarnedInterests) {
+    m_yearEndEarnedInterests = mYearEndEarnedInterests;
 }

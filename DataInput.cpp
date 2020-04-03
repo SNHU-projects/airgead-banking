@@ -3,22 +3,57 @@
 //
 #include <iostream>
 #include <vector>
-#include <iomanip>
-#include <regex>
 #include "DataInput.h"
 
 using namespace std;
 
-// Store our user prompts
-vector<string> userPrompts = {
-        "Initial Investment Amount:  ",
-        "Monthly Deposit:  ",
-        "Annual Interest:  ",
-        "Number of Years:  "
-};
-
 // Default constructor
 DataInput::DataInput() {};
+
+const vector<string> &DataInput::getMUserPrompts() const {
+    return m_userPrompts;
+}
+
+// Getters & Setters
+double DataInput::getMInitialInvestAmt() const {
+    return m_initialInvestAmt;
+}
+
+void DataInput::setMInitialInvestAmt(double mInitialInvestAmt) {
+    m_initialInvestAmt = mInitialInvestAmt;
+}
+
+double DataInput::getMMonthlyDep() const {
+    return m_monthlyDep;
+}
+
+void DataInput::setMMonthlyDep(double mMonthlyDep) {
+    m_monthlyDep = mMonthlyDep;
+}
+
+double DataInput::getMAnnualInt() const {
+    return m_annualInt;
+}
+
+void DataInput::setMAnnualInt(double mAnnualInt) {
+    m_annualInt = mAnnualInt;
+}
+
+double DataInput::getMNumYears() const {
+    return m_numYears;
+}
+
+void DataInput::setMNumYears(double mNumYears) {
+    m_numYears = mNumYears;
+}
+
+/**
+ * Print header for user input prompt
+ */
+void DataInput::printHeader() {
+    cout << string(36, '*') << endl;
+    cout << string(12, '*') << " Data Input " << string(12, '*') << endl;
+}
 
 /**
  * Prompt user for deposit info
@@ -33,33 +68,24 @@ vector<double> DataInput::promptUser() {
         try {
             // Clear any previously unfinished collections of user input
             depositDetails.clear();
-
-            // User prompt header
-            cout << string(36, '*') << endl;
-            cout << string(12, '*') << " Data Input " << string(12, '*') << endl;
-
-            // Collect user input and organize in a tidy vector
-            for (int i = 0; i < userPrompts.size(); ++i) {
-                string prompt = userPrompts.at(i);
-                double userInput;
-                cout << prompt;
-                cin >> userInput;
-
-                // Check for valid user input
-                if (!cin || userInput < 0) {
-                    throw runtime_error("\n\nAlphabetical characters and negative amounts not allowed. \n\n"
-                                        "Please try again.\n\n");
-                }
-
-                depositDetails.push_back(userInput);
-            }
+            // Display interface header
+            printHeader();
+            // Collect user input
+            depositDetails = inputCapture();
 
         }
-        catch (runtime_error& except) {
+        // Catch any invalid arguments and handle them gracefully
+        catch (invalid_argument& except) {
             cin.clear(); // Clear error flags
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear out the input buffer
             cout << except.what() << endl;
         }
+
+        // Set our class's private members
+        setMInitialInvestAmt(depositDetails.at(0));
+        setMMonthlyDep(depositDetails.at(1));
+        setMAnnualInt(depositDetails.at(2));
+        setMNumYears(depositDetails.at(3));
 
         // Check that depositDetails vector is full and user decides to continue
         if (depositDetails.size() == 4 && enterCheck()) {
@@ -68,30 +94,34 @@ vector<double> DataInput::promptUser() {
     }
 }
 
+vector<double> DataInput::inputCapture() {
+    // Collect user input and organize in a tidy vector
+    vector<double> responses;
+    vector<string> prompts = getMUserPrompts();
+
+    for (int i = 0; i < prompts.size(); ++i) {
+        string prompt = prompts.at(i);
+        double userInput;
+        cout << prompt;
+        cin >> userInput;
+
+        // Check for valid user input
+        if (!cin || userInput < 0) {
+        throw invalid_argument("\n\nAlphabetical characters and negative amounts not allowed. \n\n"
+        "Please try again.\n\n");
+        }
+
+        // Add user input to our vector
+        responses.push_back(userInput);
+    }
+    return responses;
+}
+
 /**
  *
  * @return bool
  */
 bool DataInput::enterCheck() {
-    cout << "Press enter to continue . . .\n";
+    cout << "Press enter to continue . . .\n\n\n";
     return cin.get() == '\n';
 }
-
-/**
- * Display formatted user input
- * @param itemInfo
- */
-void DataInput::displayUserInput(vector<double> itemInfo) {
-    for (int i = 0; i < userPrompts.size(); ++i) {
-        string prompt = userPrompts.at(i);
-        if (i < 2) {
-            cout << prompt << "$" << itemInfo.at(i) << setprecision(2) << fixed << endl;
-        } else if (i == 2) {
-            cout << prompt << "%" << itemInfo.at(i) << endl;
-        } else {
-            cout << prompt << itemInfo.at(i) << endl;
-        }
-    }
-    cout << endl;
-}
-

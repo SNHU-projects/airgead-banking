@@ -123,33 +123,6 @@ airgead_banking/fast:
 	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/build
 .PHONY : airgead_banking/fast
 
-BalanceAndInterest.o: BalanceAndInterest.cpp.o
-
-.PHONY : BalanceAndInterest.o
-
-# target to build an object file
-BalanceAndInterest.cpp.o:
-	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o
-.PHONY : BalanceAndInterest.cpp.o
-
-BalanceAndInterest.i: BalanceAndInterest.cpp.i
-
-.PHONY : BalanceAndInterest.i
-
-# target to preprocess a source file
-BalanceAndInterest.cpp.i:
-	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.i
-.PHONY : BalanceAndInterest.cpp.i
-
-BalanceAndInterest.s: BalanceAndInterest.cpp.s
-
-.PHONY : BalanceAndInterest.s
-
-# target to generate assembly for a file
-BalanceAndInterest.cpp.s:
-	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.s
-.PHONY : BalanceAndInterest.cpp.s
-
 Calculations.o: Calculations.cpp.o
 
 .PHONY : Calculations.o
@@ -231,6 +204,33 @@ InvestmentInfo.cpp.s:
 	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.s
 .PHONY : InvestmentInfo.cpp.s
 
+ReportGenerator.o: ReportGenerator.cpp.o
+
+.PHONY : ReportGenerator.o
+
+# target to build an object file
+ReportGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o
+.PHONY : ReportGenerator.cpp.o
+
+ReportGenerator.i: ReportGenerator.cpp.i
+
+.PHONY : ReportGenerator.i
+
+# target to preprocess a source file
+ReportGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.i
+.PHONY : ReportGenerator.cpp.i
+
+ReportGenerator.s: ReportGenerator.cpp.s
+
+.PHONY : ReportGenerator.s
+
+# target to generate assembly for a file
+ReportGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/airgead_banking.dir/build.make CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.s
+.PHONY : ReportGenerator.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -267,9 +267,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... airgead_banking"
-	@echo "... BalanceAndInterest.o"
-	@echo "... BalanceAndInterest.i"
-	@echo "... BalanceAndInterest.s"
 	@echo "... Calculations.o"
 	@echo "... Calculations.i"
 	@echo "... Calculations.s"
@@ -279,6 +276,9 @@ help:
 	@echo "... InvestmentInfo.o"
 	@echo "... InvestmentInfo.i"
 	@echo "... InvestmentInfo.s"
+	@echo "... ReportGenerator.o"
+	@echo "... ReportGenerator.i"
+	@echo "... ReportGenerator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

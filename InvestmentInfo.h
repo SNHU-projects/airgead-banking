@@ -13,11 +13,26 @@ class InvestmentInfo {
 
 public:
     InvestmentInfo();
-    InvestmentInfo(vector<int> t_months, vector<double> t_yearEndBalances, vector<double> t_yearEndEarnedInterests);
 
-    vector<int> years;
-    vector<double> yearEndBalances;
-    vector<double> yearEndEarnedInterests;
+    const vector<int> &getMYears() const;
+
+    void setMYears(const vector<int> &mYears);
+
+    const vector<double> &getMYearEndBalances() const;
+
+    void setMYearEndBalances(const vector<double> &mYearEndBalances);
+
+    const vector<double> &getMYearEndEarnedInterests() const;
+
+    void setMYearEndEarnedInterests(const vector<double> &mYearEndEarnedInterests);
+
+private:
+    vector<int> m_years;
+
+    vector<double> m_yearEndBalances;
+
+    vector<double> m_yearEndEarnedInterests;
+
 };
 
 

@@ -3,4 +3,4 @@ project(airgead_banking)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(airgead_banking main.cpp BalanceAndInterest.cpp BalanceAndInterest.h Calculations.cpp Calculations.h DataInput.cpp DataInput.h InvestmentInfo.cpp InvestmentInfo.h)
+add_executable(airgead_banking main.cpp ReportGenerator.cpp ReportGenerator.h Calculations.cpp Calculations.h DataInput.cpp DataInput.h InvestmentInfo.cpp InvestmentInfo.h)

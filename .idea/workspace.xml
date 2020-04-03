@@ -13,12 +13,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4a63ea-7a5a-472b-8480-aeea66252e94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BalanceAndInterest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BalanceAndInterest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BalanceAndInterest.h" beforeDir="false" afterPath="$PROJECT_DIR$/BalanceAndInterest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BalanceAndInterest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ReportGenerator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BalanceAndInterest.h" beforeDir="false" afterPath="$PROJECT_DIR$/ReportGenerator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Calculations.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataInput.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataInput.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataInput.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataInput.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvestmentInfo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/InvestmentInfo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvestmentInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/InvestmentInfo.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/Calculations.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/Calculations.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/DataInput.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/DataInput.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/airgead_banking" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/airgead_banking" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -72,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585325455089</updated>
-      <workItem from="1585325460675" duration="94639000" />
+      <workItem from="1585325460675" duration="101937000" />
     </task>
     <servers />
   </component>
@@ -80,46 +87,50 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="667" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1585928302375">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="667" y="259" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1585928302375" />
     <state x="294" y="242" key="#xdebugger.evaluate" timestamp="1585859998364">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="294" y="242" key="#xdebugger.evaluate/0.23.1680.1027@0.23.1680.1027" timestamp="1585859998364" />
-    <state width="506" height="466" key="DebuggerActiveHint" timestamp="1585857400945">
+    <state width="506" height="466" key="DebuggerActiveHint" timestamp="1585879687367">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="506" height="466" key="DebuggerActiveHint/0.23.1680.1027@0.23.1680.1027" timestamp="1585857400945" />
-    <state width="1453" height="358" key="GridCell.Tab.0.bottom" timestamp="1585870627001">
+    <state width="506" height="466" key="DebuggerActiveHint/0.23.1680.1027@0.23.1680.1027" timestamp="1585879687367" />
+    <state width="1453" height="236" key="GridCell.Tab.0.bottom" timestamp="1585928546572">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="358" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585870627001" />
-    <state width="1453" height="358" key="GridCell.Tab.0.center" timestamp="1585870627000">
+    <state width="1453" height="236" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546572" />
+    <state width="1453" height="236" key="GridCell.Tab.0.center" timestamp="1585928546571">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="358" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585870627000" />
-    <state width="1453" height="358" key="GridCell.Tab.0.left" timestamp="1585870626999">
+    <state width="1453" height="236" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546571" />
+    <state width="1453" height="236" key="GridCell.Tab.0.left" timestamp="1585928546569">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="358" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585870626999" />
-    <state width="1453" height="358" key="GridCell.Tab.0.right" timestamp="1585870627000">
+    <state width="1453" height="236" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546569" />
+    <state width="1453" height="236" key="GridCell.Tab.0.right" timestamp="1585928546571">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="358" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585870627000" />
-    <state width="1453" height="375" key="GridCell.Tab.1.bottom" timestamp="1585870246091">
+    <state width="1453" height="236" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546571" />
+    <state width="1453" height="126" key="GridCell.Tab.1.bottom" timestamp="1585879994299">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="375" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585870246091" />
-    <state width="1453" height="375" key="GridCell.Tab.1.center" timestamp="1585870246091">
+    <state width="1453" height="126" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994299" />
+    <state width="1453" height="126" key="GridCell.Tab.1.center" timestamp="1585879994299">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="375" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585870246091" />
-    <state width="1453" height="375" key="GridCell.Tab.1.left" timestamp="1585870246090">
+    <state width="1453" height="126" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994299" />
+    <state width="1453" height="126" key="GridCell.Tab.1.left" timestamp="1585879994298">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="375" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585870246090" />
-    <state width="1453" height="375" key="GridCell.Tab.1.right" timestamp="1585870246091">
+    <state width="1453" height="126" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994298" />
+    <state width="1453" height="126" key="GridCell.Tab.1.right" timestamp="1585879994299">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="375" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585870246091" />
+    <state width="1453" height="126" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994299" />
     <state x="629" y="175" key="SettingsEditor" timestamp="1585340985356">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -142,18 +153,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/InvestmentInfo.cpp</url>
-          <line>17</line>
+          <line>35</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/BalanceAndInterest.cpp</url>
-          <line>49</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/BalanceAndInterest.cpp</url>
-          <line>53</line>
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/BalanceAndInterest.cpp">
-			<Option target="airgead_banking"/>
-		</Unit>
-		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/BalanceAndInterest.h">
-			<Option target="airgead_banking"/>
-		</Unit>
 		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/Calculations.cpp">
 			<Option target="airgead_banking"/>
 		</Unit>
@@ -102,6 +96,12 @@
 			<Option target="airgead_banking"/>
 		</Unit>
 		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/InvestmentInfo.h">
+			<Option target="airgead_banking"/>
+		</Unit>
+		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/ReportGenerator.cpp">
+			<Option target="airgead_banking"/>
+		</Unit>
+		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/ReportGenerator.h">
 			<Option target="airgead_banking"/>
 		</Unit>
 		<Unit filename="/Users/jef.dewitt/CLionProjects/airgead-banking/main.cpp">

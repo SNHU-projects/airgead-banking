@@ -70,18 +70,18 @@ CMakeFiles/airgead_banking.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/airgead_banking.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jef.dewitt/CLionProjects/airgead-banking/main.cpp -o CMakeFiles/airgead_banking.dir/main.cpp.s
 
-CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: CMakeFiles/airgead_banking.dir/flags.make
-CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o: ../BalanceAndInterest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jef.dewitt/CLionProjects/airgead-banking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o -c /Users/jef.dewitt/CLionProjects/airgead-banking/BalanceAndInterest.cpp
+CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o: CMakeFiles/airgead_banking.dir/flags.make
+CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o: ../ReportGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jef.dewitt/CLionProjects/airgead-banking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o -c /Users/jef.dewitt/CLionProjects/airgead-banking/ReportGenerator.cpp
 
-CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jef.dewitt/CLionProjects/airgead-banking/BalanceAndInterest.cpp > CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.i
+CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jef.dewitt/CLionProjects/airgead-banking/ReportGenerator.cpp > CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.i
 
-CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jef.dewitt/CLionProjects/airgead-banking/BalanceAndInterest.cpp -o CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.s
+CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jef.dewitt/CLionProjects/airgead-banking/ReportGenerator.cpp -o CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.s
 
 CMakeFiles/airgead_banking.dir/Calculations.cpp.o: CMakeFiles/airgead_banking.dir/flags.make
 CMakeFiles/airgead_banking.dir/Calculations.cpp.o: ../Calculations.cpp
@@ -125,7 +125,7 @@ CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.s: cmake_force
 # Object files for target airgead_banking
 airgead_banking_OBJECTS = \
 "CMakeFiles/airgead_banking.dir/main.cpp.o" \
-"CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o" \
+"CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o" \
 "CMakeFiles/airgead_banking.dir/Calculations.cpp.o" \
 "CMakeFiles/airgead_banking.dir/DataInput.cpp.o" \
 "CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o"
@@ -134,7 +134,7 @@ airgead_banking_OBJECTS = \
 airgead_banking_EXTERNAL_OBJECTS =
 
 airgead_banking: CMakeFiles/airgead_banking.dir/main.cpp.o
-airgead_banking: CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o
+airgead_banking: CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o
 airgead_banking: CMakeFiles/airgead_banking.dir/Calculations.cpp.o
 airgead_banking: CMakeFiles/airgead_banking.dir/DataInput.cpp.o
 airgead_banking: CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o

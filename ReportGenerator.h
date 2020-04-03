@@ -2,8 +2,8 @@
 // Created by Jef DeWitt on 3/27/20.
 //
 
-#ifndef AIRGEAD_BANKING_BALANCEANDINTEREST_H
-#define AIRGEAD_BANKING_BALANCEANDINTEREST_H
+#ifndef AIRGEAD_BANKING_REPORTGENERATOR_H
+#define AIRGEAD_BANKING_REPORTGENERATOR_H
 
 #include <vector>
 #include "DataInput.h"
@@ -12,9 +12,9 @@
 
 using namespace std;
 
-class BalanceAndInterest {
+class ReportGenerator {
 public:
-    BalanceAndInterest();
+    ReportGenerator();
 
     void reportGenerator(InvestmentInfo  &t_dataOne, InvestmentInfo  &dataTwo);
 
@@ -28,4 +28,4 @@ private:
 };
 
 
-#endif //AIRGEAD_BANKING_BALANCEANDINTEREST_H
+#endif //AIRGEAD_BANKING_REPORTGENERATOR_H

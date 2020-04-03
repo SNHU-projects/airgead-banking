@@ -2,8 +2,6 @@
 // Created by Jef DeWitt on 3/27/20.
 //
 #include <vector>
-#include <string>
-#include <math.h>
 #include "Calculations.h"
 #include "InvestmentInfo.h"
 
@@ -45,9 +43,9 @@ InvestmentInfo Calculations::calculateAnnualInvestment(vector<double> data, bool
     }
 
     // Populate Investment object properties
-    investmentDetails.years = years;
-    investmentDetails.yearEndEarnedInterests = yearEndBals.at(0);
-    investmentDetails.yearEndBalances = yearEndBals.at(1);
+    investmentDetails.setMYears(years);
+    investmentDetails.setMYearEndEarnedInterests(yearEndBals.at(0));
+    investmentDetails.setMYearEndBalances(yearEndBals.at(1));
 
     return investmentDetails;
 
@@ -82,7 +80,7 @@ vector<vector<double>> Calculations::annualBalWithInt(double t_openAmount, doubl
             annualBalWithInterest.push_back(newBal); // add annual bal with interest to a second vector
         }
     }
-    // Used in building out InvestmentInfo objects
+    // Pass vectors back to fill out InvestmentInfo objects
     balanceAndInts.push_back(annualInterestOnly);
     balanceAndInts.push_back(annualBalWithInterest);
 
