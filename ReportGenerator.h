@@ -18,12 +18,12 @@ public:
 
     void reportGenerator(InvestmentInfo  &t_dataOne, InvestmentInfo  &dataTwo);
 
-    void annualReport(InvestmentInfo  &data);
-
     bool additionalSessionCheck();
 
 private:
     void printColHeader();
+
+    void annualReport(InvestmentInfo  &t_data);
 
 };
 

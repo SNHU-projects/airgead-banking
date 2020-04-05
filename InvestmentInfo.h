@@ -16,15 +16,15 @@ public:
 
     const vector<int> &getMYears() const;
 
-    void setMYears(const vector<int> &mYears);
+    void setMYears(const vector<int> &t_years);
 
     const vector<double> &getMYearEndBalances() const;
 
-    void setMYearEndBalances(const vector<double> &mYearEndBalances);
+    void setMYearEndBalances(const vector<double> &t_yearEndBalances);
 
     const vector<double> &getMYearEndEarnedInterests() const;
 
-    void setMYearEndEarnedInterests(const vector<double> &mYearEndEarnedInterests);
+    void setMYearEndEarnedInterests(const vector<double> &t_yearEndEarnedInterests);
 
 private:
     vector<int> m_years;

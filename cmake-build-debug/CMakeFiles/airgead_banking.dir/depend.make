@@ -3,12 +3,11 @@
 
 CMakeFiles/airgead_banking.dir/Calculations.cpp.o: ../Calculations.cpp
 CMakeFiles/airgead_banking.dir/Calculations.cpp.o: ../Calculations.h
+CMakeFiles/airgead_banking.dir/Calculations.cpp.o: ../DataInput.h
 CMakeFiles/airgead_banking.dir/Calculations.cpp.o: ../InvestmentInfo.h
 
-CMakeFiles/airgead_banking.dir/DataInput.cpp.o: ../Calculations.h
 CMakeFiles/airgead_banking.dir/DataInput.cpp.o: ../DataInput.cpp
 CMakeFiles/airgead_banking.dir/DataInput.cpp.o: ../DataInput.h
-CMakeFiles/airgead_banking.dir/DataInput.cpp.o: ../InvestmentInfo.h
 
 CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o: ../InvestmentInfo.cpp
 CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o: ../InvestmentInfo.h

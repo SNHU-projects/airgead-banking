@@ -13,19 +13,21 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4a63ea-7a5a-472b-8480-aeea66252e94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BalanceAndInterest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ReportGenerator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BalanceAndInterest.h" beforeDir="false" afterPath="$PROJECT_DIR$/ReportGenerator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Calculations.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculations.h" beforeDir="false" afterPath="$PROJECT_DIR$/Calculations.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataInput.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataInput.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataInput.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataInput.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InvestmentInfo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/InvestmentInfo.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InvestmentInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/InvestmentInfo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/BalanceAndInterest.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportGenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ReportGenerator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportGenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/ReportGenerator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/Calculations.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/Calculations.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/DataInput.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/DataInput.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/InvestmentInfo.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/ReportGenerator.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/airgead_banking.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/airgead_banking" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/airgead_banking" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -79,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585325455089</updated>
-      <workItem from="1585325460675" duration="101937000" />
+      <workItem from="1585325460675" duration="111531000" />
     </task>
     <servers />
   </component>
@@ -95,42 +97,42 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="294" y="242" key="#xdebugger.evaluate/0.23.1680.1027@0.23.1680.1027" timestamp="1585859998364" />
-    <state width="506" height="466" key="DebuggerActiveHint" timestamp="1585879687367">
+    <state width="506" height="466" key="DebuggerActiveHint" timestamp="1585928980164">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="506" height="466" key="DebuggerActiveHint/0.23.1680.1027@0.23.1680.1027" timestamp="1585879687367" />
-    <state width="1453" height="236" key="GridCell.Tab.0.bottom" timestamp="1585928546572">
+    <state width="506" height="466" key="DebuggerActiveHint/0.23.1680.1027@0.23.1680.1027" timestamp="1585928980164" />
+    <state width="1503" height="236" key="GridCell.Tab.0.bottom" timestamp="1586094235984">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="236" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546572" />
-    <state width="1453" height="236" key="GridCell.Tab.0.center" timestamp="1585928546571">
+    <state width="1503" height="236" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586094235984" />
+    <state width="1503" height="236" key="GridCell.Tab.0.center" timestamp="1586094235983">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="236" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546571" />
-    <state width="1453" height="236" key="GridCell.Tab.0.left" timestamp="1585928546569">
+    <state width="1503" height="236" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586094235983" />
+    <state width="1503" height="236" key="GridCell.Tab.0.left" timestamp="1586094235982">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="236" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546569" />
-    <state width="1453" height="236" key="GridCell.Tab.0.right" timestamp="1585928546571">
+    <state width="1503" height="236" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586094235982" />
+    <state width="1503" height="236" key="GridCell.Tab.0.right" timestamp="1586094235983">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="236" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585928546571" />
-    <state width="1453" height="126" key="GridCell.Tab.1.bottom" timestamp="1585879994299">
+    <state width="1503" height="236" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586094235983" />
+    <state width="1503" height="320" key="GridCell.Tab.1.bottom" timestamp="1586094177618">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="126" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994299" />
-    <state width="1453" height="126" key="GridCell.Tab.1.center" timestamp="1585879994299">
+    <state width="1503" height="320" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1586094177618" />
+    <state width="1503" height="320" key="GridCell.Tab.1.center" timestamp="1586094177617">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="126" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994299" />
-    <state width="1453" height="126" key="GridCell.Tab.1.left" timestamp="1585879994298">
+    <state width="1503" height="320" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1586094177617" />
+    <state width="1503" height="320" key="GridCell.Tab.1.left" timestamp="1586094177617">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="126" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994298" />
-    <state width="1453" height="126" key="GridCell.Tab.1.right" timestamp="1585879994299">
+    <state width="1503" height="320" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1586094177617" />
+    <state width="1503" height="320" key="GridCell.Tab.1.right" timestamp="1586094177617">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1453" height="126" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585879994299" />
+    <state width="1503" height="320" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1586094177617" />
     <state x="629" y="175" key="SettingsEditor" timestamp="1585340985356">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -152,9 +154,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/InvestmentInfo.cpp</url>
-          <line>35</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/Calculations.cpp</url>
+          <line>93</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

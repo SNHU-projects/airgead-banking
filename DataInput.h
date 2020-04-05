@@ -6,48 +6,35 @@
 #define AIRGEAD_BANKING_DATAINPUT_H
 
 #include <vector>
-#include "Calculations.h"
 
 using namespace std;
 
 class DataInput {
 public:
+    DataInput();
+
     const vector<string> &getMUserPrompts() const;
 
     double getMInitialInvestAmt() const;
 
-    void setMInitialInvestAmt(double mInitialInvestAmt);
+    void setMInitialInvestAmt(double t_initialInvestAmt);
 
     double getMMonthlyDep() const;
 
-    void setMMonthlyDep(double mMonthlyDep);
+    void setMMonthlyDep(double t_monthlyDep);
 
     double getMAnnualInt() const;
 
-    void setMAnnualInt(double mAnnualInt);
+    void setMAnnualInt(double t_annualInt);
 
     double getMNumYears() const;
 
-    void setMNumYears(double mNumYears);
+    void setMNumYears(double t_numYears);
 
-    DataInput();
-
-    void printHeader();
-
-    vector<double> promptUser();
-
-    vector<double> inputCapture();
-
-    bool enterCheck();
+    void promptUser();
 
 private:
-    // Store our user prompts
-    vector<string> m_userPrompts = {
-            "Initial Investment Amount:  ",
-            "Monthly Deposit:  ",
-            "Annual Interest:  ",
-            "Number of Years:  "
-    };
+    vector<string> m_userPrompts;
 
     double m_initialInvestAmt;
 
@@ -57,6 +44,11 @@ private:
 
     double m_numYears;
 
+    void printHeader();
+
+    vector<double> inputCapture();
+
+    bool enterCheck();
 };
 
 

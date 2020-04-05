@@ -1,5 +1,4 @@
 #include <string>
-#include <vector>
 #include <iostream>
 #include "DataInput.h"
 #include "Calculations.h"
@@ -13,11 +12,11 @@ void startApp() {
 
     try {
         do {
-            DataInput dataInput; // Prompt user for input
-            vector<double> userData = dataInput.promptUser();
-//            dataInput.displayUserInput(userData); // Display transaction details back to user
+            // Prompt user for input and store results
+            DataInput userData;
+            userData.promptUser();
 
-            // User Calculations objects to manipulate the user data
+            // Pass the user input on to make appropriate calculations
             Calculations calculations;
             InvestmentInfo acctWithNoMonthlyDep = calculations.calculateAnnualInvestment(userData);
             InvestmentInfo acctWithMonthlyDep = calculations.calculateAnnualInvestment(userData, true);
@@ -25,11 +24,13 @@ void startApp() {
             // User ReportGenerator objects to relay interest info back to the user
             ReportGenerator balanceAndInterestReport;
             balanceAndInterestReport.reportGenerator(acctWithNoMonthlyDep, acctWithMonthlyDep);
+
+            // Prompt the user to continue or exit program
             restart = balanceAndInterestReport.additionalSessionCheck();
         } while (restart);
     }
     catch (runtime_error& except) {
-        cout << except.what() << endl;
+        cout << "Oops! Something went wrong. Exception: " <<  except.what() << endl;
     }
 }
 

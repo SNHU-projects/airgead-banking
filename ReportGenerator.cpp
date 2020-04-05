@@ -16,13 +16,20 @@ const char* YEAR_END_INTEREST = "Year End Interest";
 // Constructor
 ReportGenerator::ReportGenerator() {}
 
-// Private
+/**
+ * Print the report column titles
+ */
 void ReportGenerator::printColHeader() {
     cout << string(66, '=') << endl;
     cout << setw(9) << YEAR << setw(26) << YEAR_END_BAL << setw(27) << YEAR_END_INTEREST << endl;
     cout << string(66, '-') << endl;
 }
 
+/**
+ * Print the report header
+ * @param t_dataOne
+ * @param t_dataTwo
+ */
 void ReportGenerator::reportGenerator(InvestmentInfo  &t_dataOne, InvestmentInfo  &t_dataTwo) {
     cout <<"     Balance and Interest Without Additional Monthly Deposits     \n" << endl;
     annualReport(t_dataOne);
@@ -31,21 +38,31 @@ void ReportGenerator::reportGenerator(InvestmentInfo  &t_dataOne, InvestmentInfo
     annualReport(t_dataTwo);
 }
 
-void ReportGenerator::annualReport(InvestmentInfo  &data) {
-    printColHeader();
-    // TODO: Fix by referencing Investment object getters.
-    vector<int> years = data.getMYears();
-    vector<double> yearEndBalances = data.getMYearEndBalances();
-    vector<double> yearEndEarnedInterests = data.getMYearEndEarnedInterests();
+/**
+ * Print the rows of financial info for the report
+ * @param data
+ */
+void ReportGenerator::annualReport(InvestmentInfo  &t_data) {
+    // Set local vars to producing accurate report
+    vector<int> years = t_data.getMYears();
+    vector<double> yearEndBalances = t_data.getMYearEndBalances();
+    vector<double> yearEndEarnedInterests = t_data.getMYearEndEarnedInterests();
 
+    printColHeader();
+
+    // Loop over InvestmentInfo object to fill out report
     for (int i = 0; i < years.size(); ++i) {
-        cout << setw(9) << years.at(i);
+        cout << setw(9) << years.at(i) << fixed << setprecision(2);
         cout << setw(26) << yearEndBalances.at(i) << fixed << setprecision(2);
         cout << setw(27) << yearEndEarnedInterests.at(i) << fixed << setprecision(2)<< endl;
     }
     cout << endl << endl;
 }
 
+/**
+ * Prompt user for additinoal session
+ * @return bool
+ */
 bool ReportGenerator::additionalSessionCheck() {
     string text;
 

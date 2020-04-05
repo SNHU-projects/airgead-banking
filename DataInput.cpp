@@ -8,7 +8,14 @@
 using namespace std;
 
 // Default constructor
-DataInput::DataInput() {};
+DataInput::DataInput() {
+    DataInput::m_userPrompts = {
+        "Initial Investment Amount:  ",
+                "Monthly Deposit:  ",
+                "Annual Interest:  ",
+                "Number of Years:  "
+    };
+};
 
 const vector<string> &DataInput::getMUserPrompts() const {
     return m_userPrompts;
@@ -19,32 +26,32 @@ double DataInput::getMInitialInvestAmt() const {
     return m_initialInvestAmt;
 }
 
-void DataInput::setMInitialInvestAmt(double mInitialInvestAmt) {
-    m_initialInvestAmt = mInitialInvestAmt;
+void DataInput::setMInitialInvestAmt(double t_initialInvestAmt) {
+    m_initialInvestAmt = t_initialInvestAmt;
 }
 
 double DataInput::getMMonthlyDep() const {
     return m_monthlyDep;
 }
 
-void DataInput::setMMonthlyDep(double mMonthlyDep) {
-    m_monthlyDep = mMonthlyDep;
+void DataInput::setMMonthlyDep(double t_monthlyDep) {
+    m_monthlyDep = t_monthlyDep;
 }
 
 double DataInput::getMAnnualInt() const {
     return m_annualInt;
 }
 
-void DataInput::setMAnnualInt(double mAnnualInt) {
-    m_annualInt = mAnnualInt;
+void DataInput::setMAnnualInt(double t_annualInt) {
+    m_annualInt = t_annualInt;
 }
 
 double DataInput::getMNumYears() const {
     return m_numYears;
 }
 
-void DataInput::setMNumYears(double mNumYears) {
-    m_numYears = mNumYears;
+void DataInput::setMNumYears(double t_numYears) {
+    m_numYears = t_numYears;
 }
 
 /**
@@ -56,10 +63,9 @@ void DataInput::printHeader() {
 }
 
 /**
- * Prompt user for deposit info
- * @return depositDetails
+ * Capture user input and set class members
  */
-vector<double> DataInput::promptUser() {
+void DataInput::promptUser() {
     vector<double> depositDetails;
     char quitCmd = 'a';  // Indicates infinite loop till user satisfies input requirements
 
@@ -81,19 +87,24 @@ vector<double> DataInput::promptUser() {
             cout << except.what() << endl;
         }
 
-        // Set our class's private members
-        setMInitialInvestAmt(depositDetails.at(0));
-        setMMonthlyDep(depositDetails.at(1));
-        setMAnnualInt(depositDetails.at(2));
-        setMNumYears(depositDetails.at(3));
-
         // Check that depositDetails vector is full and user decides to continue
         if (depositDetails.size() == 4 && enterCheck()) {
-            return depositDetails;
+            // Set our class's private members
+            setMInitialInvestAmt(depositDetails.at(0));
+            setMMonthlyDep(depositDetails.at(1));
+            setMAnnualInt(depositDetails.at(2));
+            setMNumYears(depositDetails.at(3));
+
+            // Exit this class and return to main()
+            quitCmd = 'q';
         }
     }
 }
 
+/**
+ * Loop over user prompts and store responses
+ * @return responses
+ */
 vector<double> DataInput::inputCapture() {
     // Collect user input and organize in a tidy vector
     vector<double> responses;
@@ -106,9 +117,9 @@ vector<double> DataInput::inputCapture() {
         cin >> userInput;
 
         // Check for valid user input
-        if (!cin || userInput < 0) {
-        throw invalid_argument("\n\nAlphabetical characters and negative amounts not allowed. \n\n"
-        "Please try again.\n\n");
+        if (!cin || userInput < 0.01) {
+            throw invalid_argument("\n\nAlphabetical characters and amounts less than .01 not allowed. \n\n"
+            "Please try again.\n\n");
         }
 
         // Add user input to our vector
@@ -118,7 +129,7 @@ vector<double> DataInput::inputCapture() {
 }
 
 /**
- *
+ * An abstracted method for validating specific enter key presses
  * @return bool
  */
 bool DataInput::enterCheck() {
